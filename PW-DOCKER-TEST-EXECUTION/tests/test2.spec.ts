@@ -1,18 +1,9 @@
 import { expect, test } from '@playwright/test'
 import { NavigationPage } from '../page-objects/navigationPage'
 
-/**
- * 
- * !!! UNCOMMENT 'baseURL: 'http://localhost:4200/',' in the 'playwright.config.ts' project in 'use' section to make working this spec file 
- * 
- * 
- * SUPPORT SEVERAL URLS IN THE PROJECT (DYNAMICLLY SWITCH BETWEEN THE ENVIRONMENTS)
- * We can have several projects in the 'playwright.config.ts'
- * 
- */
 
 test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('http://localhost:4200/')
 })
 
 test('test', async ({ page }) => {

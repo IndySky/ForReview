@@ -1,0 +1,21 @@
+{
+  "name": "pw-parallel-test-execution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "test1-chrome": "npx playwright test test1.spec.ts --project=chromium",
+    "test1-firefox": "npx playwright test test1.spec.ts --project=firefox",
+    "test1-all-one-by-one": "npx playwright test test1.spec.ts --project=chromium && npx playwright test test1.spec.ts --project=firefox",
+    "test1-all": "npx playwright test test1.spec.ts --project=chromium & npx playwright test test1.spec.ts --project=firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.27"
+  }
+}
